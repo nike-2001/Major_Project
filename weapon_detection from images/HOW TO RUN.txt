@@ -1,0 +1,30 @@
+
+1.for detecting a single weapon you can use below command:
+
+	python app.py -s input_images/img2.jpg -c 0.5
+
+2. To detect multiple weapons with accuracy 
+	python app.py -s input_images/img5.jpg -c 0.1 -n 0.2 -cls Weapon -cfg yolov4-custom.cfg -w yolov4-custom_last.weights -wm 416 -hm 416
+
+
+3.Parameter information:
+	usage: app.py [-h] [-s SOURCE_IMG] [-c CONFIDENCE] [-n NMS] [-cls CLASS_NAMES [CLASS_NAMES ...]] [-cfg CONFIG] [-w WEIGHTS] [-wm WIDTH_MODEL]
+              [-hm HEIGHT_MODEL]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -s SOURCE_IMG, --source-img SOURCE_IMG
+                        Input your image source to detect the object
+  -c CONFIDENCE, --confidence CONFIDENCE
+                        Input your minimal value to detect the object
+  -n NMS, --nms NMS     Input your minimal value nms threshold
+  -cls CLASS_NAMES [CLASS_NAMES ...], --class-names CLASS_NAMES [CLASS_NAMES ...]
+                        Input your custom classes
+  -cfg CONFIG, --config CONFIG
+                        Input your custom config path
+  -w WEIGHTS, --weights WEIGHTS
+                        Input your custom weights path
+  -wm WIDTH_MODEL, --width-model WIDTH_MODEL
+                        Input your model width requirements
+  -hm HEIGHT_MODEL, --height-model HEIGHT_MODEL
+                        Input your model height requirements
